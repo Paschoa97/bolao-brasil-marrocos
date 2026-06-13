@@ -1,0 +1,96 @@
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f2f4f7;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+header{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+h1{
+    color:#009739;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.placar{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.placar input{
+    width:80px;
+}
+
+button{
+    background:#009739;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:12px 20px;
+}
+
+.stats{
+    display:flex;
+    gap:20px;
+}
+
+.stat{
+    flex:1;
+    text-align:center;
+}
+
+.stat span{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.pix-box{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+#pix{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.aposta{
+    border-bottom:1px solid #eee;
+    padding:10px 0;
+}
+
+.rank{
+    padding:6px 0;
+}
+
+.fechado{
+    color:red;
+    font-weight:bold;
+}
