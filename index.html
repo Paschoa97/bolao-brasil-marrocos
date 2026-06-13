@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bolão Brasil x Marrocos</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🏆 Bolão Brasil x Marrocos</h1>
+        <p>R$ 5,00 por palpite</p>
+
+        <div id="contador"></div>
+    </header>
+
+    <div class="card">
+
+        <h2>Faça seu palpite</h2>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Seu nome"
+        >
+
+        <div class="placar">
+
+            <span>🇧🇷 Brasil</span>
+
+            <input
+                id="brasil"
+                type="number"
+                min="0"
+            >
+
+            <span>x</span>
+
+            <input
+                id="marrocos"
+                type="number"
+                min="0"
+            >
+
+            <span>🇲🇦 Marrocos</span>
+
+        </div>
+
+        <button id="btnSalvar">
+            Registrar Palpite
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>PIX</h2>
+
+        <div class="pix-box">
+
+            <div id="pix">
+                39742558850
+            </div>
+
+            <button id="copiarPix">
+                Copiar PIX
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Regras</h2>
+
+        <ul>
+            <li>R$ 5 por palpite.</li>
+            <li>Palpites ilimitados.</li>
+            <li>Encerramento às 19h.</li>
+            <li>Ganha quem acertar o placar exato.</li>
+            <li>Mais de um vencedor divide o prêmio.</li>
+            <li>Nenhum vencedor acumula.</li>
+        </ul>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card stat">
+            <h3>Apostas</h3>
+            <span id="qtd">0</span>
+        </div>
+
+        <div class="card stat">
+            <h3>Arrecadado</h3>
+            <span id="valor">R$ 0,00</span>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Placares mais apostados</h2>
+
+        <div id="ranking"></div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Palpites</h2>
+
+        <div id="lista"></div>
+
+    </div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
