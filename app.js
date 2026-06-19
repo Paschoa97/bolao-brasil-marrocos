@@ -25,7 +25,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const ENCERRAMENTO =
-new Date("2026-06-13T19:00:00");
+new Date("2026-06-19T21:30:00-03:00");
 
 const VALOR_APOSTA = 5;
 
@@ -102,9 +102,9 @@ async function salvar(){
     .getElementById("brasil")
     .value;
 
-    const marrocos =
+    const haiti =
     document
-    .getElementById("marrocos")
+    .getElementById("haiti")
     .value;
 
     if(!nome){
@@ -113,7 +113,7 @@ async function salvar(){
         return;
     }
 
-    if(brasil === "" || marrocos === ""){
+    if(brasil === "" || haiti === ""){
 
         alert("Informe o placar.");
         return;
@@ -124,7 +124,7 @@ async function salvar(){
         {
             nome,
             brasil:Number(brasil),
-            marrocos:Number(marrocos),
+            haiti:Number(haiti),
             criadoEm:serverTimestamp()
         }
     );
@@ -134,7 +134,7 @@ async function salvar(){
     );
 
     document.getElementById("brasil").value="";
-    document.getElementById("marrocos").value="";
+    document.getElementById("haiti").value="";
 }
 
 const q =
@@ -158,7 +158,7 @@ onSnapshot(q,(snapshot)=>{
         const a = doc.data();
 
         const chave =
-        `${a.brasil}x${a.marrocos}`;
+        `${a.brasil}x${a.haiti}`;
 
         ranking[chave] =
         (ranking[chave] || 0) + 1;
@@ -168,7 +168,7 @@ onSnapshot(q,(snapshot)=>{
                 <strong>${a.nome}</strong>
                 → Brasil ${a.brasil}
                 x
-                ${a.marrocos} Marrocos
+                ${a.haiti} Haiti
             </div>
         `;
     });
