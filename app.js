@@ -14,9 +14,9 @@ from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCwQ5gdmUYN1Kg2uXs2-jIQlRR4XLIOv2o",
-  authDomain: "bolao-brasil-e-marrocos.firebaseapp.com",
-  projectId: "bolao-brasil-e-marrocos",
-  storageBucket: "bolao-brasil-e-marrocos.firebasestorage.app",
+  authDomain: "bolao-brasil-e-scotland.firebaseapp.com",
+  projectId: "bolao-brasil-e-scotland",
+  storageBucket: "bolao-brasil-e-scotland.firebasestorage.app",
   messagingSenderId: "614526950041",
   appId: "1:614526950041:web:728309f1ae5f31934ef608"
 };
@@ -102,9 +102,9 @@ async function salvar(){
     .getElementById("brasil")
     .value;
 
-    const haiti =
+    const scotland =
     document
-    .getElementById("haiti")
+    .getElementById("scotland")
     .value;
 
     if(!nome){
@@ -113,7 +113,7 @@ async function salvar(){
         return;
     }
 
-    if(brasil === "" || haiti === ""){
+    if(brasil === "" || scotland === ""){
 
         alert("Informe o placar.");
         return;
@@ -124,7 +124,7 @@ async function salvar(){
         {
             nome,
             brasil:Number(brasil),
-            haiti:Number(haiti),
+            scotland:Number(scotland),
             criadoEm:serverTimestamp()
         }
     );
@@ -134,7 +134,7 @@ async function salvar(){
     );
 
     document.getElementById("brasil").value="";
-    document.getElementById("haiti").value="";
+    document.getElementById("scotland").value="";
 }
 
 const q =
@@ -158,7 +158,7 @@ onSnapshot(q,(snapshot)=>{
         const a = doc.data();
 
         const chave =
-        `${a.brasil}x${a.haiti}`;
+        `${a.brasil}x${a.scotland}`;
 
         ranking[chave] =
         (ranking[chave] || 0) + 1;
@@ -168,7 +168,7 @@ onSnapshot(q,(snapshot)=>{
                 <strong>${a.nome}</strong>
                 → Brasil ${a.brasil}
                 x
-                ${a.haiti} Haiti
+                ${a.scotland} scotland
             </div>
         `;
     });
