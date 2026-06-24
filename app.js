@@ -14,9 +14,9 @@ from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCwQ5gdmUYN1Kg2uXs2-jIQlRR4XLIOv2o",
-  authDomain: "bolao-brasil-e-scotland.firebaseapp.com",
-  projectId: "bolao-brasil-e-scotland",
-  storageBucket: "bolao-brasil-e-scotland.firebasestorage.app",
+  authDomain: "bolao-brasil-e-marrocos.firebaseapp.com",
+  projectId: "bolao-brasil-e-marrocos",
+  storageBucket: "bolao-brasil-e-marrocos.firebasestorage.app",
   messagingSenderId: "614526950041",
   appId: "1:614526950041:web:728309f1ae5f31934ef608"
 };
@@ -25,7 +25,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const ENCERRAMENTO =
-new Date("2026-06-19T21:30:00-03:00");
+new Date("2026-06-24T19:00:00-03:00");
 
 const VALOR_APOSTA = 5;
 
